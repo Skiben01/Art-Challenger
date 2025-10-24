@@ -1,0 +1,30 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Art Challenger"
+config/features=PackedStringArray("4.5", "Mobile")
+
+[file_customization]
+
+folder_colors={
+"res://assets/": "red",
+"res://pic_maker/": "yellow"
+}
+
+[gui]
+
+theme/custom="uid://bmquahyhy2kon"
+
+[rendering]
+
+renderer/rendering_method="mobile"
+environment/defaults/default_clear_color=Color(0.8132577, 0.8132577, 0.81325763, 1)

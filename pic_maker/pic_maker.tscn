@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://of66dd7f5h6q"]
+
+[ext_resource type="Theme" uid="uid://bmquahyhy2kon" path="res://theme.tres" id="1_l7b7d"]
+[ext_resource type="Script" uid="uid://c0oim134je1ij" path="res://pic_maker/date_time.gd" id="2_gmoep"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_owegq"]
+
+[node name="PicMaker" type="SubViewportContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="."]
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+
+[node name="Control" type="MarginContainer" parent="SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SubViewport/Control"]
+layout_mode = 2
+
+[node name="Content" type="PanelContainer" parent="SubViewport/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_owegq")
+
+[node name="DateTime" type="HBoxContainer" parent="SubViewport/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("1_l7b7d")
+script = ExtResource("2_gmoep")
+
+[node name="Time" type="Label" parent="SubViewport/Control/VBoxContainer/DateTime"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+text = "[Time]"
+
+[node name="Date" type="Label" parent="SubViewport/Control/VBoxContainer/DateTime"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+text = "[Date]"
+horizontal_alignment = 2
