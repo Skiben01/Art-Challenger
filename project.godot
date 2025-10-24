@@ -12,11 +12,13 @@ config_version=5
 
 config/name="Art Challenger"
 config/features=PackedStringArray("4.5", "Mobile")
+drawings/prep_time=120
 
 [file_customization]
 
 folder_colors={
 "res://assets/": "red",
+"res://challengers/": "orange",
 "res://pic_maker/": "yellow"
 }
 

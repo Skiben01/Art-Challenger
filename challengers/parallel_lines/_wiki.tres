@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="WikiData" load_steps=2 format=3 uid="uid://b37hoyvyfojyj"]
+
+[ext_resource type="Script" uid="uid://b6sfski786wv4" path="res://challengers/wiki_data.gd" id="1_m7ykn"]
+
+[resource]
+script = ExtResource("1_m7ykn")
+name = "Parallel Lines"
+description = "Draw shorter lines, something in the 3-inch range, and work up to the full length of the paper. Make sure to engage the entire arm and that lines are drawn consciously; they should be repeatable at the same length and spacing. Draw lightly. These are fundamentals for drawing construction lines."
+series = 2
+recommended_time = 50
+metadata/_custom_type_script = "uid://b6sfski786wv4"
