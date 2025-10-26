@@ -16,3 +16,6 @@ enum Series {
 
 ## in seconds.
 @export var recommended_time: int = -100
+
+## Loads at runtime.
+var scene: PackedScene

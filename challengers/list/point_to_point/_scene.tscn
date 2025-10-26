@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqxor086y2yaj"]
+
+[ext_resource type="Script" uid="uid://bpwucg45rwbht" path="res://challengers/list/point_to_point/_scene.gd" id="1_qmo7w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2g51k"]
+
+[node name="Scene" type="PanelContainer"]
+clip_contents = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_2g51k")
+script = ExtResource("1_qmo7w")

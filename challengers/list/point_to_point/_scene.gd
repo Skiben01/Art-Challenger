@@ -1,4 +1,4 @@
-extends Control
+extends PanelContainer
 
 ## The icon shown on the screen.
 const ICON: Texture2D = preload("res://assets/icons/point.png")
@@ -15,4 +15,4 @@ func _ready() -> void:
 		var upper: Vector2 = get_rect().size + lower
 		add_child(sprt)
 		
-		sprt.global_position = Vector2(randf_range(lower.x, upper.x), randf_range(lower.y, upper.y)) 
+		sprt.global_position = Vector2(randf_range(lower.x, upper.x), randf_range(upper.y, lower.y)) 

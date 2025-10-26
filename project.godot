@@ -11,20 +11,30 @@ config_version=5
 [application]
 
 config/name="Art Challenger"
+run/main_scene="uid://ctom3t2rtv4sy"
 config/features=PackedStringArray("4.5", "Mobile")
 drawings/prep_time=120
+
+[autoload]
+
+ChallInfo="*res://challengers/chall_info.gd"
 
 [display]
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="ignore"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/SharePlugin/plugin.cfg")
+
 [file_customization]
 
 folder_colors={
 "res://assets/": "red",
 "res://challengers/": "orange",
-"res://pic_maker/": "yellow"
+"res://pic_maker/": "yellow",
+"res://root/": "blue"
 }
 
 [gui]
@@ -34,4 +44,5 @@ theme/custom="uid://bmquahyhy2kon"
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
 environment/defaults/default_clear_color=Color(0.8132577, 0.8132577, 0.81325763, 1)

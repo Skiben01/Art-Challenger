@@ -1,0 +1,88 @@
+[gd_scene load_steps=3 format=3 uid="uid://cl5c3vsn6jnrx"]
+
+[ext_resource type="Texture2D" uid="uid://dvig4k55xs2us" path="res://assets/icons/point.png" id="2_cpo0u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uo0le"]
+
+[node name="Scene" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_uo0le")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="1" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="1" type="TextureRect" parent="VBoxContainer/1"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("2_cpo0u")
+
+[node name="Line2D" type="Line2D" parent="VBoxContainer/1/1"]
+points = PackedVector2Array(130, 93, -99, -66)
+width = 2.26
+default_color = Color(0, 0, 0, 1)
+antialiased = true
+
+[node name="2" type="TextureRect" parent="VBoxContainer/1"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("2_cpo0u")
+
+[node name="3" type="TextureRect" parent="VBoxContainer/1"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("2_cpo0u")
+
+[node name="2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="1" type="TextureRect" parent="VBoxContainer/2"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("2_cpo0u")
+
+[node name="2" type="TextureRect" parent="VBoxContainer/2"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("2_cpo0u")
+
+[node name="3" type="TextureRect" parent="VBoxContainer/2"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("2_cpo0u")
+
+[node name="3" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="1" type="TextureRect" parent="VBoxContainer/3"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("2_cpo0u")
+
+[node name="2" type="TextureRect" parent="VBoxContainer/3"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("2_cpo0u")
+
+[node name="3" type="TextureRect" parent="VBoxContainer/3"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("2_cpo0u")

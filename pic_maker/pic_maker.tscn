@@ -1,23 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://of66dd7f5h6q"]
+[gd_scene load_steps=6 format=3 uid="uid://of66dd7f5h6q"]
 
 [ext_resource type="FontFile" uid="uid://c8sd4e7rwyixn" path="res://assets/fonts/RushDriver-Italic.otf" id="1_gmoep"]
 [ext_resource type="Script" uid="uid://d2u7k0tx2e7t" path="res://pic_maker/pic_maker.gd" id="1_gyq7t"]
 [ext_resource type="Theme" uid="uid://bmquahyhy2kon" path="res://theme.tres" id="1_l7b7d"]
 [ext_resource type="Script" uid="uid://c0oim134je1ij" path="res://pic_maker/date_time.gd" id="2_gmoep"]
-[ext_resource type="Resource" uid="uid://b37hoyvyfojyj" path="res://challengers/parallel_lines/_wiki.tres" id="2_h1ilp"]
-[ext_resource type="PackedScene" uid="uid://c7ea7cp0ium7x" path="res://challengers/parallel_lines/_scene.tscn" id="4_ay7r7"]
+[ext_resource type="Script" uid="uid://dbs1prhb3qlw3" path="res://addons/SharePlugin/Share.gd" id="5_h1ilp"]
 
-[node name="PicMaker" type="PanelContainer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="PicMaker" type="SubViewport"]
 script = ExtResource("1_gyq7t")
-wiki = ExtResource("2_h1ilp")
 
 [node name="Control" type="MarginContainer" parent="."]
-layout_mode = 2
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 1150.0
+offset_bottom = 646.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control"]
 layout_mode = 2
@@ -63,14 +59,12 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="Content" type="MarginContainer" parent="Control/VBoxContainer/Line"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
-
-[node name="Scene" parent="Control/VBoxContainer/Line/Content" instance=ExtResource("4_ay7r7")]
-layout_mode = 2
 
 [node name="DateTime" type="HBoxContainer" parent="Control/VBoxContainer"]
 modulate = Color(1, 1, 1, 0.32156864)
@@ -99,3 +93,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 8
 text = "[Date]"
 horizontal_alignment = 2
+
+[node name="Share" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("5_h1ilp")
+metadata/_custom_type_script = "uid://dbs1prhb3qlw3"
