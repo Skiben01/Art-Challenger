@@ -14,6 +14,11 @@ config/name="Art Challenger"
 config/features=PackedStringArray("4.5", "Mobile")
 drawings/prep_time=120
 
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="ignore"
+
 [file_customization]
 
 folder_colors={

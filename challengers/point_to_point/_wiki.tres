@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="WikiData" load_steps=2 format=3 uid="uid://cs3seekt65uwt"]
+
+[ext_resource type="Script" uid="uid://b6sfski786wv4" path="res://challengers/wiki_data.gd" id="1_5m6y3"]
+
+[resource]
+script = ExtResource("1_5m6y3")
+name = "Point to Point"
+description = "Connect the points. Remember to rotate the tablet to orient one straight line that thee body knows how to draw. It's fine to overshoot the points slightly to the improved flow."
+series = 2
+recommended_time = 50
+metadata/_custom_type_script = "uid://b6sfski786wv4"

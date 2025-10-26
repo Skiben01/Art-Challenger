@@ -1,4 +1,4 @@
-extends SubViewportContainer
+extends PanelContainer
 
 ## The flavour texts.
 @export var wiki: WikiData : set = set_wiki

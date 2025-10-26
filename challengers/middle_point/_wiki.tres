@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="WikiData" load_steps=2 format=3 uid="uid://bn25djv4ytxia"]
+
+[ext_resource type="Script" uid="uid://b6sfski786wv4" path="res://challengers/wiki_data.gd" id="1_7tbe3"]
+
+[resource]
+script = ExtResource("1_7tbe3")
+name = "Middle Point"
+description = "Draw lines that meet in one point. Start tp draw at amu [pomt pitsode pf tje cemter Draw a line through the center, and continue."
+series = 2
+recommended_time = 50
+metadata/_custom_type_script = "uid://b6sfski786wv4"

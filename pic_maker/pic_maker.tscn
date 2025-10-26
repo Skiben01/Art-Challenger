@@ -5,10 +5,9 @@
 [ext_resource type="Theme" uid="uid://bmquahyhy2kon" path="res://theme.tres" id="1_l7b7d"]
 [ext_resource type="Script" uid="uid://c0oim134je1ij" path="res://pic_maker/date_time.gd" id="2_gmoep"]
 [ext_resource type="Resource" uid="uid://b37hoyvyfojyj" path="res://challengers/parallel_lines/_wiki.tres" id="2_h1ilp"]
+[ext_resource type="PackedScene" uid="uid://c7ea7cp0ium7x" path="res://challengers/parallel_lines/_scene.tscn" id="4_ay7r7"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_owegq"]
-
-[node name="PicMaker" type="SubViewportContainer"]
+[node name="PicMaker" type="PanelContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -17,31 +16,22 @@ grow_vertical = 2
 script = ExtResource("1_gyq7t")
 wiki = ExtResource("2_h1ilp")
 
-[node name="SubViewport" type="SubViewport" parent="."]
-handle_input_locally = false
-size = Vector2i(1152, 648)
-render_target_update_mode = 4
-
-[node name="Control" type="MarginContainer" parent="SubViewport"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="SubViewport/Control"]
+[node name="Control" type="MarginContainer" parent="."]
 layout_mode = 2
 
-[node name="Wiki" type="HBoxContainer" parent="SubViewport/Control/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 2
+
+[node name="Wiki" type="HBoxContainer" parent="Control/VBoxContainer"]
 clip_contents = true
-custom_minimum_size = Vector2(0, 140)
+custom_minimum_size = Vector2(0, 117.47)
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="SubViewport/Control/VBoxContainer/Wiki"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/Wiki"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Title" type="RichTextLabel" parent="SubViewport/Control/VBoxContainer/Wiki/VBoxContainer"]
+[node name="Title" type="RichTextLabel" parent="Control/VBoxContainer/Wiki/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -51,15 +41,16 @@ theme_override_font_sizes/normal_font_size = 56
 text = "Challenge Name "
 fit_content = true
 visible_characters = 32
+visible_ratio = 2.1333334
 
-[node name="Series" type="Label" parent="SubViewport/Control/VBoxContainer/Wiki/VBoxContainer"]
+[node name="Series" type="Label" parent="Control/VBoxContainer/Wiki/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 2
 text = "Scott Robertson"
 
-[node name="Description" type="RichTextLabel" parent="SubViewport/Control/VBoxContainer/Wiki"]
+[node name="Description" type="RichTextLabel" parent="Control/VBoxContainer/Wiki"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -67,25 +58,34 @@ text = "Lorem Ipsum is simply dummy text of the printing and typesetting industr
 fit_content = true
 scroll_active = false
 
-[node name="Content" type="PanelContainer" parent="SubViewport/Control/VBoxContainer"]
+[node name="Line" type="PanelContainer" parent="Control/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxEmpty_owegq")
 
-[node name="DateTime" type="HBoxContainer" parent="SubViewport/Control/VBoxContainer"]
+[node name="Content" type="MarginContainer" parent="Control/VBoxContainer/Line"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Scene" parent="Control/VBoxContainer/Line/Content" instance=ExtResource("4_ay7r7")]
+layout_mode = 2
+
+[node name="DateTime" type="HBoxContainer" parent="Control/VBoxContainer"]
 modulate = Color(1, 1, 1, 0.32156864)
 layout_mode = 2
 size_flags_vertical = 8
 theme = ExtResource("1_l7b7d")
 script = ExtResource("2_gmoep")
 
-[node name="Time" type="Label" parent="SubViewport/Control/VBoxContainer/DateTime"]
+[node name="Time" type="Label" parent="Control/VBoxContainer/DateTime"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 8
 text = "[Time]"
 
-[node name="TimeDone" type="Label" parent="SubViewport/Control/VBoxContainer/DateTime"]
+[node name="TimeDone" type="Label" parent="Control/VBoxContainer/DateTime"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -93,7 +93,7 @@ size_flags_vertical = 8
 text = "Done in 19:30? ☐"
 horizontal_alignment = 1
 
-[node name="Date" type="Label" parent="SubViewport/Control/VBoxContainer/DateTime"]
+[node name="Date" type="Label" parent="Control/VBoxContainer/DateTime"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 8
